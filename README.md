@@ -30,14 +30,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # SECCION 12 - APLICACIÓN #7: FireChat - AngularFire2
 
-	## INICIANDO EL PROYECTO FireChat
-		
-	Recursos:
-		- https://github.com/angular/angularfire2
-		- 
+## INICIANDO EL PROYECTO FireChat
+	
+Recursos:
+	- https://github.com/angular/angularfire2
+	- http://getbootstrap.com/docs/4.0/getting-started/introduction/
+	- https://console.firebase.google.com/project/firechat-54ee7/overview
 
-	1. Ejecutar los siguientes comandos:
-		- ng new firechat
+1. Ejecutar los siguientes comandos:
+	- ng new firechat
 
-	2. Reemplazar el archivo `styles.css` que se encuentra en el directorio `src` con
-	el archivo adjunto.
+2. Reemplazar el archivo `styles.css` que se encuentra en el directorio `src` con
+el archivo adjunto.
