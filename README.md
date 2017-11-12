@@ -26,3 +26,18 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+# SECCION 12 - APLICACIÓN #7: FireChat - AngularFire2
+
+	## INICIANDO EL PROYECTO FireChat
+		
+	Recursos:
+		- https://github.com/angular/angularfire2
+		- 
+
+	1. Ejecutar los siguientes comandos:
+		- ng new firechat
+
+	2. Reemplazar el archivo `styles.css` que se encuentra en el directorio `src` con
+	el archivo adjunto.
