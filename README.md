@@ -32,10 +32,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## INICIANDO EL PROYECTO FireChat
 	
-Recursos:
-	- https://github.com/angular/angularfire2
-	- http://getbootstrap.com/docs/4.0/getting-started/introduction/
-	- https://console.firebase.google.com/project/firechat-54ee7/overview
+	Recursos:
+		- https://github.com/angular/angularfire2
+		- http://getbootstrap.com/docs/4.0/getting-started/introduction/
+		- https://console.firebase.google.com/project/firechat-54ee7/overview
 
 1. Ejecutar los siguientes comandos:
 	- ng new firechat
