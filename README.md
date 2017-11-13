@@ -112,8 +112,8 @@ de firebase:
 
 1. Crear un nuevo componente
 	- ng g c components/chat -is --spec=false
-		-is : especifica si el estilo sera creado en el componente
-		--spec : especifica si el archivo de pruebas sera creado o no
+	is : especifica si el estilo sera creado en el componente
+	--spec : especifica si el archivo de pruebas sera creado o no
 
 2. Modificar la vista principal
 	- src/app/app.component.html
@@ -124,6 +124,8 @@ de firebase:
 4. Añadir la función `enviar_mensaje` en el componente `chat` 
 
 5. Importar `FormsModule` al componente principal
+	
+
 
 
 
