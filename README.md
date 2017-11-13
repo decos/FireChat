@@ -108,8 +108,22 @@ de firebase:
 
 17. Ahora nuestra aplicación esta pendiente de cualquier cambio hecho en `Firebase`
 
+## COMPONENTE DEL CHAT
 
+1. Crear un nuevo componente
+	- ng g c components/chat -is --spec=false
+		-is : especifica si el estilo sera creado en el componente
+		--spec : especifica si el archivo de pruebas sera creado o no
 
+2. Modificar la vista principal
+	- src/app/app.component.html
+
+3. Modificar la vista del componente `chat`
+	- src/app/components/chat/chat.component.html
+
+4. Añadir la función `enviar_mensaje` en el componente `chat` 
+
+5. Importar `FormsModule` al componente principal
 
 
 
