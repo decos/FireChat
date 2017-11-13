@@ -42,3 +42,76 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 2. Reemplazar el archivo `styles.css` que se encuentra en el directorio `src` con
 el archivo adjunto.
+
+## INSTALACIÓN DE AngularFire2 - USO DE LA LIBRERÍA
+
+	Recursos:
+		- https://github.com/angular/angularfire2/blob/master/docs/install-and-setup.md
+		- https://console.firebase.google.com/project/firechat-54ee7/overview
+
+1. Instalar Angular-CLI
+
+2. Crear un nuevo proyecto (firechat)
+
+3. Instalar AngularFire y Firebase 
+	- npm install angularfire2 firebase --save
+
+4. Agregar la configuración de Firebase a la variable de enviroment de Angular
+	- src/environments/environment.ts
+
+5. Añadir Firebase a la aplicación web
+
+6. Agregar en la fichero `app.module.ts` las siguientes lineas, para usar la configuracion
+de firebase:
+	- import { AngularFireModule } from 'angularfire2';
+	- import { environment } from '../environments/environment';
+	- AngularFireModule.initializeApp(environment.firebase), // imports firebase/app needed for everything
+	
+7. Agregar en la fichero `app.module.ts` los siguientes modulos individuales:
+	- import { AngularFirestoreModule } from 'angularfire2/firestore';
+	- import { AngularFireAuthModule } from 'angularfire2/auth';
+	- AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+	- AngularFireAuthModule, // imports firebase/auth, only needed for auth features
+
+8. Inyectar AngularFirestore al fichero `src/app/app.component.ts`
+	- import { AngularFirestore } from 'angularfire2/firestore';
+	- constructor(db: AngularFirestore) {}
+
+9. Hacer un enlace del objeto `items` al html
+	- import { Observable } from 'rxjs/Observable';
+	- public items: Observable<any[]>;
+	- this.items = db.collection('items').valueChanges();
+	
+10. Agregar a la vista principal o al fichero `src/app/app.component.html` las siguientes lineas:
+	<ul>
+	   <li class="text" *ngFor="let item of items | async">
+	       {{item.name}}
+	   </li>
+	</ul>
+
+11. Ir a la siguiente URL y habilitar el `Cloud Firestore BETA`
+	- https://console.firebase.google.com/project/firechat-54ee7/database/firechat-54ee7/data
+
+12. Hacer clic en `Añadir Colección` y agregar la colección `chats`
+
+13. Agregar dos `documentos` uno con el valor `Hola Mundo` y el otro con `Saludos!`
+
+14. Ir a la siguiente URL para modoficar las reglas
+	- https://console.firebase.google.com/project/firechat-54ee7/database/firestore/rules
+
+15. Modificar la siguiente linea para evitar la autenticacion
+	- allow read, write: if true;
+
+16. Modificar los siguientes ficheros y adaptarlo a la nueva coleccion creada `chats`
+	- src/app/app.component.ts
+	- src/app/app.component.html
+
+17. Ahora nuestra aplicación esta pendiente de cualquier cambio hecho en `Firebase`
+
+
+
+
+
+
+
+
