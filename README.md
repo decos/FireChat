@@ -112,9 +112,8 @@ de firebase:
 
 1. Crear un nuevo componente
 	- ng g c components/chat -is --spec=false
-	
-	is : especifica si el estilo sera creado en el componente
-	--spec : especifica si el archivo de pruebas sera creado o no
+	- Especifica si el estilo sera creado en el componente: -is
+	- Especifica si el archivo de pruebas sera creado o no: --spec=false
 
 2. Modificar la vista principal
 	- src/app/app.component.html
