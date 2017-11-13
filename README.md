@@ -125,8 +125,19 @@ de firebase:
 
 5. Importar `FormsModule` al componente principal
 	
+## SERVICIOS PARA CONTROLAR LAS ACCIONES DEL CHAT
 
+1. Crear un servicio
+	- ng g s providers/chat --spec=false
 
+2. Agregar er servicio o `provider`al modulo principal de proyecto
+
+	Colecciones: 
+		- Nos va permitir retornar a nosotros registros en forma de arreglo.
+
+3. Codear el provider `ChatService` y crear el metodo `cargarMensajes`
+
+4. Inyectar el provider `ChatService` en el componente `Chat` y codear el constructor
 
 
 
