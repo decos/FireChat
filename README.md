@@ -150,4 +150,21 @@ de firebase:
 
 5. Codear la funcion `enviar_mensaje` en el componente `chat`
 
+## DESPLEGAR MENSAJES EN LA CAJA DEL CHAT CORRECTAMENTE
+
+1. Eliminar todos los documentos de la base de datos
+
+2. Ordernar por fecha de ingreso los mensajes, modificando el servicio `cargarMensajes`
+
+3. Obtener el elemento `app-mensajes` para trabajar con el `scroll` utilizando `ngOnInit`
+
+4. Usar el elemento en el constructor
+
+
+
+
+
+
+
+
 

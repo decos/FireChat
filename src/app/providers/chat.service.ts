@@ -15,13 +15,23 @@ export class ChatService {
 
   //Deberia regresar una promesa o un observable
   cargarMensajes(){
-    this.itemsCollection = this.afs.collection<Mensaje>('chats');
+    this.itemsCollection = this.afs.collection<Mensaje>('chats',
+          ref => ref.orderBy('fecha', 'desc').limit(5)
+    );
     //Pendiente de todos los cambios
     return this.itemsCollection.valueChanges().map(
-      (mensajes:Mensaje[]) => {
-        console.log("Mensajes - Provider" , mensajes);
-        this.chats = mensajes;
-      }
+        (mensajes:Mensaje[]) => {
+          console.log("Mensajes - Provider" , mensajes);
+
+          this.chats = [];
+
+          for( let mensaje of mensajes){
+            this.chats.unshift( mensaje );
+          }
+
+          return this.chats;
+          //this.chats = mensajes;
+        }
     )
   }
 
