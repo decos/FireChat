@@ -132,13 +132,22 @@ de firebase:
 
 2. Agregar er servicio o `provider`al modulo principal de proyecto
 
-	Colecciones: 
-		- Nos va permitir retornar a nosotros registros en forma de arreglo.
+	Colecciones: Nos va permitir retornar a nosotros registros en forma de arreglo.
 
 3. Codear el provider `ChatService` y crear el metodo `cargarMensajes`
 
 4. Inyectar el provider `ChatService` en el componente `Chat` y codear el constructor
 
+## CARGAR Y AGREGAR MENSAJES AL CHAT
 
+1. Crear una interfaz llamada `Mensaje`
+
+2. Importar la nueva interfaz en el `provider` y modificar la función `cargarMensajes`
+
+3. Modificar la vista del componente `chat` para leer los mensasjes devueltos por el `provider`
+
+4. Codear el servicio `agregarMensaje`
+
+5. Codear la funcion `enviar_mensaje` en el componente `chat`
 
 

@@ -13,13 +13,23 @@ export class ChatComponent {
 
   constructor( public _cs:ChatService ) {
     this._cs.cargarMensajes()
-      .subscribe( (mensajes:any[]) => {
+      .subscribe(/*(mensajes:any[]) => {
         console.log(mensajes);
-      })
+      }*/);
   }
 
   enviar_mensaje(){
     console.log(this.mensaje);
+
+    if( this.mensaje.length === 0){
+      return;
+    }
+
+    this._cs.agregarMensaje( this.mensaje )
+          .then( ()=>this.mensaje = "" )
+          .catch( (err)=>console.error("Error al enviar", err ));
+
+    this.mensaje = "";
   }
 
 }
