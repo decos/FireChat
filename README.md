@@ -227,3 +227,16 @@ de firebase:
 
 7. Probar
 
+## TOQUES FINALES A NUESTRO CHAT
+
+	Recursos:
+		- https://console.firebase.google.com/project/firechat-54ee7/database/firestore/data~2F
+
+1. Codear la vista principal para mostrar el chat solo si el usuario esta autenticado
+
+2. Modificar la funcion `agregarMensaje` del servicio
+
+3. Modificar la vista del componente `chat`
+
+4. Probar con una cuenta de Twitter y Google al mismo tiempo
+
