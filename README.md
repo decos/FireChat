@@ -201,3 +201,29 @@ de firebase:
 
 11. Codear en el constructor, suscribirse a un observable.
 
+## AUTENTICACIÓN CON TWITTER
+	
+	Recursos:
+		- https://console.firebase.google.com/project/firechat-54ee7/authentication/providers
+		- https://firebase.google.com/docs/auth/web/twitter-login?authuser=0
+		- https://apps.twitter.com/
+
+1. Codear en la vista principal el boton `Salir`
+
+2. Importar el `servicio`en el componente principal e inyectarlo en el constructor
+
+3. Codear la función `logout` para que limpie el atributo `usuario` al llamar a la función
+
+4. Codear en la vista principal, cuando debe aparecer los botones `Salir` y para `Autenticarse`
+
+5. Autenticación de Google:
+	- Ir al tercer recurso
+	- Crear una nueva aplicación
+	- Copiar el callback URL de el primer recurso y pegarlo en el campo de texto `Callback URL`
+	- Hacer clic en el boton `Crear`
+	- En la pestaña `Permisos` seleccionar la opción `Read Only`
+
+6. Modificar la funcion login para que proveedor sea `google` o `twitter`
+
+7. Probar
+

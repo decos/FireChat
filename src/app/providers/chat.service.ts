@@ -34,11 +34,17 @@ export class ChatService {
 
   //Firebase Authentication function
   login( proveedor:string ) {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    if( proveedor === 'google' ){
+      this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    } else {
+      this.afAuth.auth.signInWithPopup(new firebase.auth.TwitterAuthProvider());
+    }
+
   }
 
   //Firebase Authentication function
   logout() {
+    this.usuario = {};
     this.afAuth.auth.signOut();
   }
 
