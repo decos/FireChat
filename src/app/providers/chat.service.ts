@@ -4,14 +4,43 @@ import { AngularFirestore, AngularFirestoreCollection } from 'angularfire2/fires
 import { Observable } from 'rxjs/Observable';
 //Import interface
 import { Mensaje } from '../interface/mensaje.interface';
+//Firebase Authentication
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
 
 @Injectable()
 export class ChatService {
 
   private itemsCollection: AngularFirestoreCollection<any>;
   public chats: any[] = [];
+  public usuario:any = {};
 
-  constructor(private afs: AngularFirestore) { }
+  constructor(private afs: AngularFirestore,
+              public afAuth: AngularFireAuth) {
+
+      this.afAuth.authState.subscribe(
+        user => {
+          console.log("Estado del Usuario: ", user);
+
+          if(!user){
+            return;
+          }
+
+          this.usuario.nombre = user.displayName;
+          this.usuario.uid = user.uid;
+        }
+      )
+  }
+
+  //Firebase Authentication function
+  login( proveedor:string ) {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }
+
+  //Firebase Authentication function
+  logout() {
+    this.afAuth.auth.signOut();
+  }
 
   //Deberia regresar una promesa o un observable
   cargarMensajes(){

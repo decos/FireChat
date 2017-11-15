@@ -160,11 +160,44 @@ de firebase:
 
 4. Usar el elemento en el constructor
 
+## AUTENTICACIÓN CON GOOGLE
 
+	Recursos:
+		- https://console.firebase.google.com/project/firechat-54ee7/authentication/users
+		- https://github.com/angular/angularfire2/blob/master/docs/auth/getting-started.md
 
+1. Crear un nuevo componente llamado `login`
+	- ng g c components/login -is --spec=false
 
+2. Codear la vista del componente `login`
 
+3. Codear la funcion `ingresar` del componente `login`
 
+4. Autenticación de Google:
+	- Ir al primer recurso
+	- Seleccionar `Método de Acceso`
+	- Seleccionar `Google`
+	- Seleccionar `Habilitar`
+	- Hacer clic en el botón `Guardar`
+	
+- Eso seria todo, para permitir que conexiones de google sean aceptadas en nuestra app de firebase
 
+5. Empezar con a autenticación de Firebase, ir al segundo recurso
 
+6. Importar las siguientes clases en el `servicio`
+	- import { AngularFireAuth } from 'angularfire2/auth';
+	- import * as firebase from 'firebase/app';
+
+7. Inyectar la clase `AngularFireAuth` en el constructor del `servicio`
+	- public afAuth: AngularFireAuth
+
+8. Añadir las funciones `login` y `logout`
+
+9. Llamar a los nuevos servicios desde el componente `login`
+	- Importar el servicio
+	- Inyectar el servicio en el constructor
+
+10. Crear un nuevo campo en el servicio llamado `usuario` de tipo `any`
+
+11. Codear en el constructor, suscribirse a un observable.
 
